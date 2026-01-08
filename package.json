@@ -16,6 +16,9 @@
     "clean": "rimraf dist",
     "ts": "ts-node"
   },
+  "dependencies": {
+    "chalk": "5.6.2"
+  },
   "devDependencies": {
     "@types/node": "18.17.17",
     "@typescript-eslint/eslint-plugin": "6.7.0",
@@ -23,12 +26,12 @@
     "eslint": "8.49.0",
     "eslint-config-htmlacademy": "9.1.1",
     "rimraf": "5.0.1",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "typescript": "5.2.2"
   },
   "type": "module",
   "engines": {
-    "node": "^18.0.0",
+    "node": ">20.19",
     "npm": ">=8"
   }
 }
