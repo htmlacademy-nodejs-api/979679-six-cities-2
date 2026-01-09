@@ -1,6 +1,6 @@
-import { HousingType } from './housing-type.enum.js';
-import { Facility } from './facility.enum.js';
-import { Coordinates } from './coordinates.type.js';
+import type { HousingType } from './housing-type.enum.js';
+import type { Facility } from './facility.enum.js';
+import type { Coordinates } from './coordinates.type.js';
 
 export interface RentalOffer {
   title: string;

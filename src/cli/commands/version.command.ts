@@ -1,15 +1,10 @@
 import { resolve } from 'node:path';
-import { Command } from './command.interface.js';
+import type { Command } from './command.interface.js';
 import { readFileSync } from 'node:fs';
 import chalk from 'chalk';
 
 interface PackageJsonData {
   version: string
-}
-
-
-function isPackageJson(value: unknown): value is PackageJsonData {
-  return value !== null && typeof value === 'object' && !Array.isArray(value) && Object.hasOwn(value, 'version');
 }
 
 
@@ -21,11 +16,15 @@ export class VersionCommand implements Command {
     const json = readFileSync(resolve(this.filepath), 'utf-8');
     const parsedData: unknown = JSON.parse(json);
 
-    if (!isPackageJson(parsedData)) {
+    if (!this.isPackageJson(parsedData)) {
       throw new Error('Invalid package.json');
     }
 
     return parsedData.version;
+  }
+
+  private isPackageJson(value: unknown): value is PackageJsonData {
+    return value !== null && typeof value === 'object' && !Array.isArray(value) && Object.hasOwn(value, 'version');
   }
 
   execute(..._params: string[]): void {
