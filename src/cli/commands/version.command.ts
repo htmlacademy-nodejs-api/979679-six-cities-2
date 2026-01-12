@@ -8,7 +8,7 @@ interface PackageJsonData {
 }
 
 
-export class VersionCommand implements Command {
+export default class VersionCommand implements Command {
   constructor(private readonly filepath: string = './package.json') {
   }
 
