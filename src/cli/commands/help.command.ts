@@ -1,7 +1,7 @@
 import type { Command } from './command.interface.js';
 import chalk from 'chalk';
 
-export default class HelpCommand implements Command {
+export class HelpCommand implements Command {
   execute(..._params: string[]): void {
     console.info(chalk.bgBlackBright(
       `

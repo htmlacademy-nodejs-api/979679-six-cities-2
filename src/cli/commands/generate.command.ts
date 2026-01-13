@@ -5,9 +5,9 @@ import { TsvOfferGenerator } from '../../shared/lib/offer-generator/tsv-offer-ge
 import { getErrorMessage } from '../../shared/helpers/index.js';
 import { TsvFileWriter } from '../../shared/lib/file-writer/tsv-file-writer.js';
 
-export default class GenerateCommand implements Command {
+export class GenerateCommand implements Command {
 
-  private initialData: MockServerData;
+  private initialData: MockServerData | undefined;
 
   private async load(url: string) {
     try {
@@ -18,6 +18,9 @@ export default class GenerateCommand implements Command {
   }
 
   private async write(filepath: string, offerCount: number) {
+    if (!this.initialData) {
+      return;
+    }
     const tsvOfferGenerator = new TsvOfferGenerator(this.initialData);
     const tsvFileWriter = new TsvFileWriter(filepath);
     for (let i = 0; i < offerCount; i++) {

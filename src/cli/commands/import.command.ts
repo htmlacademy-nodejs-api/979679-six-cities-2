@@ -2,7 +2,7 @@ import type { Command } from './command.interface.js';
 import { TsvFileReader } from '../../shared/lib/file-reader/tsv-file-reader.js';
 import { createOffer, getErrorMessage } from '../../shared/helpers/index.js';
 
-export default class ImportCommand implements Command {
+export class ImportCommand implements Command {
 
   private onImportedLine(line: string) {
     const offer = createOffer(line);
