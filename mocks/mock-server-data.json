@@ -1,0 +1,109 @@
+{
+  "api": {
+    "titles": [
+      "Уютная квартира в центре",
+      "Комната недалеко от вокзала",
+      "Дом с садом",
+      "Отель рядом с центром",
+      "Апартаменты с видом на реку",
+      "Комната в семейном доме",
+      "Дом у озера",
+      "Номер в бизнес-отеле"
+    ],
+    "descriptions": [
+      "Светлая квартира рядом с историческим центром города.",
+      "Небольшая комната, идеально для короткой поездки.",
+      "Просторный дом с собственным садом и парковкой.",
+      "Комфортный номер в современном отеле.",
+      "Современные апартаменты с панорамными окнами.",
+      "Тихое место, дружелюбные хозяева.",
+      "Идеально для отдыха на природе.",
+      "Удобно для командировок и деловых поездок."
+    ],
+    "cities": [
+      "Paris",
+      "Cologne",
+      "Brussels",
+      "Amsterdam",
+      "Prague",
+      "Hamburg",
+      "Dusseldorf"
+    ],
+    "previews": [
+      "preview-paris-1.jpg",
+      "preview-cologne-1.jpg",
+      "preview-brussels-1.jpg",
+      "preview-amsterdam-1.jpg",
+      "preview-hamburg-1.jpg",
+      "preview-dusseldorf-1.jpg"
+    ],
+    "photos": [
+      ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
+      ["room1.jpg", "room2.jpg"],
+      ["house1.jpg", "house2.jpg", "house3.jpg"],
+      ["hotel1.jpg", "hotel2.jpg"],
+      ["apt1.jpg", "apt2.jpg"],
+      ["family1.jpg"],
+      ["lake1.jpg", "lake2.jpg"],
+      ["biz1.jpg", "biz2.jpg"]
+    ],
+    "ratings": [
+      4.7,
+      4.2,
+      4.9,
+      4.4,
+      4.6,
+      4.1,
+      4.8,
+      4.3
+    ],
+    "housingTypes": [
+      "apartment",
+      "room",
+      "house",
+      "hotel",
+      "apartment",
+      "room",
+      "house",
+      "hotel"
+    ],
+    "facilities": [
+      ["Breakfast", "Air conditioning", "Washer", "Fridge"],
+      ["Towels", "Fridge"],
+      ["Air conditioning", "Baby seat", "Washer", "Fridge"],
+      ["Breakfast", "Air conditioning", "Towels"],
+      ["Laptop friendly workspace", "Washer", "Fridge"],
+      ["Breakfast", "Towels"],
+      ["Air conditioning", "Washer", "Fridge", "Baby seat"],
+      ["Laptop friendly workspace", "Air conditioning", "Towels"]
+    ],
+    "authors": [
+      "user_1",
+      "user_2",
+      "user_3",
+      "user_4",
+      "user_5",
+      "user_6",
+      "user_7",
+      "user_8"
+    ],
+    "commentCounts": [
+      12,
+      5,
+      28,
+      18,
+      9,
+      3,
+      21,
+      14
+    ],
+    "coordinates": [
+      { "latitude": "48.85661", "longitude": "2.351499" },
+      { "latitude": "50.938361", "longitude": "6.959974" },
+      { "latitude": "50.846557", "longitude": "4.351697" },
+      { "latitude": "52.370216", "longitude": "4.895168" },
+      { "latitude": "53.550341", "longitude": "10.000654" },
+      { "latitude": "51.225402", "longitude": "6.776314" }
+    ]
+  }
+}
