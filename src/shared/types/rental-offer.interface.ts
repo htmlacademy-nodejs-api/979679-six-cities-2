@@ -9,8 +9,6 @@ export interface RentalOffer {
   city: string;
   preview: string;
   photos: string[];
-  isPremium: boolean;
-  isFavorite: boolean;
   rating: number;
   housingType: HousingType;
   roomCount: number;
@@ -20,4 +18,6 @@ export interface RentalOffer {
   author: string;
   commentCounts?: number;
   coordinates: Coordinates;
+  isPremium: boolean;
+  isFavorite: boolean;
 }

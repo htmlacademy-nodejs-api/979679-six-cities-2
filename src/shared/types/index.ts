@@ -4,3 +4,5 @@ export * from './facility.enum.js';
 export * from './housing-type.enum.js';
 export * from './rental-offer.interface.js';
 export * from './component.enum.js';
+export * from './user-type.enum.js';
+export * from './user.interface.js';

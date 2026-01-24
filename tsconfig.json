@@ -11,7 +11,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "strictPropertyInitialization": true,
+    "strictPropertyInitialization": false,
     "noFallthroughCasesInSwitch": true,
     "importHelpers": true,
     "skipLibCheck": true,
