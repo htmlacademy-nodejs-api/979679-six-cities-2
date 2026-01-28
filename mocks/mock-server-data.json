@@ -77,16 +77,6 @@
       ["Air conditioning", "Washer", "Fridge", "Baby seat"],
       ["Laptop friendly workspace", "Air conditioning", "Towels"]
     ],
-    "authors": [
-      "user_1",
-      "user_2",
-      "user_3",
-      "user_4",
-      "user_5",
-      "user_6",
-      "user_7",
-      "user_8"
-    ],
     "commentCounts": [
       12,
       5,
@@ -104,6 +94,113 @@
       { "latitude": "52.370216", "longitude": "4.895168" },
       { "latitude": "53.550341", "longitude": "10.000654" },
       { "latitude": "51.225402", "longitude": "6.776314" }
+    ],
+    "authors": [
+      {
+        "name": "Анна",
+        "email": "anna@example.com",
+        "photo": "https://example.com/anna.jpg",
+        "password": "secure123",
+        "userType": "default"
+      },
+      {
+        "name": "Иван",
+        "email": "ivan@example.com",
+        "photo": "https://example.com/ivan.jpg",
+        "password": "pass456",
+        "userType": "pro"
+      },
+      {
+        "name": "Мария",
+        "email": "maria@example.com",
+        "photo": "https://example.com/maria.jpg",
+        "password": "qwerty789",
+        "userType": "default"
+      },
+      {
+        "name": "Петр",
+        "email": "petr@example.com",
+        "photo": "https://example.com/petr.jpg",
+        "password": "abc123",
+        "userType": "pro"
+      },
+      {
+        "name": "Света",
+        "email": "sveta@example.com",
+        "photo": "https://example.com/sveta.jpg",
+        "password": "def456",
+        "userType": "default"
+      },
+      {
+        "name": "Дмитрий",
+        "email": "dmitry@example.com",
+        "photo": "https://example.com/dmitry.jpg",
+        "password": "ghi789",
+        "userType": "pro"
+      },
+      {
+        "name": "Елена",
+        "email": "elena@example.com",
+        "photo": "https://example.com/elena.jpg",
+        "password": "jkl123",
+        "userType": "default"
+      },
+      {
+        "name": "Алексей",
+        "email": "aleksey@example.com",
+        "photo": "https://example.com/aleksey.jpg",
+        "password": "mno456",
+        "userType": "pro"
+      },
+      {
+        "name": "Ольга",
+        "email": "olga@example.com",
+        "photo": "https://example.com/olga.jpg",
+        "password": "pqr789",
+        "userType": "default"
+      },
+      {
+        "name": "Сергей",
+        "email": "sergey@example.com",
+        "photo": "https://example.com/sergey.jpg",
+        "password": "stu123",
+        "userType": "pro"
+      },
+      {
+        "name": "Наталья",
+        "email": "natalya@example.com",
+        "photo": "https://example.com/natalya.jpg",
+        "password": "vwx456",
+        "userType": "default"
+      },
+      {
+        "name": "Александр",
+        "email": "alexandr@example.com",
+        "photo": "https://example.com/alexandr.jpg",
+        "password": "yz123",
+        "userType": "pro"
+      },
+      {
+        "name": "Татьяна",
+        "email": "tatiana@example.com",
+        "photo": "https://example.com/tatiana.jpg",
+        "password": "abc456",
+        "userType": "default"
+      },
+      {
+        "name": "Игорь",
+        "email": "igor@example.com",
+        "photo": "https://example.com/igor.jpg",
+        "password": "def789",
+        "userType": "pro"
+      },
+      {
+        "name": "Юлия",
+        "email": "yulia@example.com",
+        "photo": "https://example.com/yulia.jpg",
+        "password": "ghi123",
+        "userType": "default"
+      }
     ]
   }
 }

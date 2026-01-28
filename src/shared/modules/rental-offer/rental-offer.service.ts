@@ -11,7 +11,6 @@ export class DefaultRentalOfferService implements RentalOfferService {
   }
 
   public async create(dto: CreateRentalOfferDto): Promise<DocumentType<RentalOfferEntity>> {
-    console.log(dto);
     const offer = await this.rentalOfferModel.create(dto);
     this.logger.info(`New rental offer created: ${dto.title}`);
     return offer;

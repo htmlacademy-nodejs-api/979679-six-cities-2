@@ -12,8 +12,8 @@ import {
 import { ConsoleLogger } from '../../shared/lib/logger/console.logger.js';
 import { DefaultUserService, UserModel } from '../../shared/modules/user/index.js';
 import { MongoDatabaseClient } from '../../shared/lib/database-client/mongo.database-client.js';
-import { DEFAULT_DB_PORT, DEFAULT_USER_PASSWORD } from './command.constant.js';
-import { type RentalOffer, UserType } from '../../shared/types/index.js';
+import { type RentalOffer } from '../../shared/types/index.js';
+import { config } from 'dotenv';
 
 export class ImportCommand implements Command {
 
@@ -33,9 +33,10 @@ export class ImportCommand implements Command {
     this.databaseClient = new MongoDatabaseClient(this.logger);
   }
 
-  private async onImportedLine(line: string) {
+  private async onImportedLine(line: string, resolve: () => void) {
     const offer = createOffer(line);
     await this.saveOffer(offer);
+    resolve();
   }
 
   private onCompleteImport(count: number) {
@@ -44,14 +45,16 @@ export class ImportCommand implements Command {
   }
 
   private async saveOffer(offer: Omit<RentalOffer, 'isPremium' | 'isFavorite' | 'rating'>) {
-    // это все нужно в TSV тоже упихать?
-
+    const env = config();
+    if (env.error) {
+      throw env.error;
+    }
+    if (!env.parsed?.DEFAULT_USER_PASSWORD) {
+      throw new Error('add DEFAULT_USER_PASSWORD to .env');
+    }
     const user = await this.userService.create({
-      avatar: offer.author,
-      userType: UserType.COMMON,
-      name: 'generate name',
-      email: 'email',
-      password: DEFAULT_USER_PASSWORD
+      ...offer.author,
+      password: env.parsed.DEFAULT_USER_PASSWORD
     }, this.salt);
 
     await this.offerService.create({
@@ -62,7 +65,14 @@ export class ImportCommand implements Command {
   }
 
   async execute(filename: string, login: string, password: string, host: string, dbname: string, salt: string): Promise<void> {
-    const uri = getMongoURI(login, password, host, DEFAULT_DB_PORT, dbname);
+    const env = config();
+    if (env.error) {
+      throw env.error;
+    }
+    if (!env.parsed?.DB_PORT) {
+      throw new Error('add DEFAULT_DB_PORT to .env');
+    }
+    const uri = getMongoURI(login, password, host, env.parsed.DB_PORT, dbname);
     this.salt = salt;
 
     await this.databaseClient.connect(uri);

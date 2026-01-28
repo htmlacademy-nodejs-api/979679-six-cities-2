@@ -27,7 +27,7 @@ export class TsvOfferGenerator implements OfferGenerator {
     const guestCount = generateRandomValue(1, 10);
     const cost = generateRandomValue(100, 100000);
     const facilities = getRandomItem(this.mockData.facilities);
-    const author = getRandomItem(this.mockData.authors);
+    const author = JSON.stringify(getRandomItem(this.mockData.authors));
     const commentsCount = generateRandomValue(0, 40);
     const {longitude, latitude} = getRandomItem(this.mockData.coordinates);
     return [
